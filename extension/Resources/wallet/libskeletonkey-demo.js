@@ -9,6 +9,7 @@ $(document).ready(function(){
 
 			SkeletonKey.listenForDisconnect(function() {
 				MyWallet.setLogoutTime(200);
+				MyStore.clear();
 			});
 
 			$('#restore-guid').val(credentials.acct.walletGUID);
