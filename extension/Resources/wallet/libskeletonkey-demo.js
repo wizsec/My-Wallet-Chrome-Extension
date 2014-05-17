@@ -8,8 +8,8 @@ $(document).ready(function(){
 			var credentials = result.value;
 
 			SkeletonKey.listenForDisconnect(function() {
-				MyWallet.setLogoutTime(200);
 				MyStore.clear();
+				MyWallet.logout();
 			});
 
 			$('#restore-guid').val(credentials.acct.walletGUID);
